@@ -1,4 +1,7 @@
 ---
+import Navbar from '../components/Navbar.astro';
+import backgroundImage from '../assets/images/backgroundtexture.jpeg';
+
 export interface Props {
 	title: string;
 }
@@ -16,17 +19,22 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navbar/>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,900;1,600;1,900&display=swap');
+
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: 'Poppins', sans-serif;
+		background: rgb(0,4,36); 
+	background: linear-gradient(90deg, rgba(0,4,36,1) 0%, rgba(9,9,50,1) 37%, rgba(5,12,74,0.9234287464985994) 100%),url('../assets/images/backgroundtexture.jpeg');
+  /* background-repeat: no-repeat; */
+  background-size:auto;
+	/* background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url('images/background.jpg'); */
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
