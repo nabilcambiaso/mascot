@@ -15,6 +15,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta
       name="description"
       content="We are a digital marketing agency that specializes in SEO, social media, and PPC advertising. Contact us to learn how we can help you grow your business."
@@ -30,20 +31,24 @@ const { title } = Astro.props;
   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,900;1,600;1,900&display=swap");
 
   html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
     font-family: "Poppins", sans-serif;
     background: rgb(0, 4, 36);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 4, 36, 1) 0%,
-        rgba(9, 9, 50, 1) 37%,
-        rgba(5, 12, 74, 0.9234287464985994) 100%
-      ),
+    background: 
+      linear-gradient(90deg, rgba(0,4,36,1) 0%, rgba(4,4,22,1) 37%, rgba(3,7,40,0.9234287464985994) 100%),
       url("../assets/images/backgroundtexture.webp");
     /* background-repeat: no-repeat; */
     background-size: auto;
     /* background-image:
     linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
     url('images/background.jpg'); */
+  }
+  body{
+    overflow: auto;
+    height: 100%;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,

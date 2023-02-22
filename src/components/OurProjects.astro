@@ -1,0 +1,133 @@
+---
+import close from "./../assets/images/close.png";
+import { gsap } from "gsap";
+
+---
+<div class="container"> 
+
+  <button id="launchButton"  class="text-white">launch</button>
+
+<div class="overlay">
+  <a href="#" class="exit"><img src={close} alt="Exit projects"></a>
+  <div class="projects">
+    <div class="project-container">
+      <p class="category">
+        <ul>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-container">
+      <p class="category">
+        <ul>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-container">
+      <p class="category">
+        <ul>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-container">
+      <p class="category">
+        <ul>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="project-container">
+      <p class="category">
+        <ul>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+          <li><a href="">link here</a></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script >
+  const button = document.querySelector('#launchButton');
+  const overlay = document.querySelector('.overlay');
+  const exit = document.querySelector('.exit');
+
+ var tl = gsap.timeline({defaults:{duration: 2, ease:Back.easeOut.config(2)}})
+ tl.paused(true);
+ tl.to('.overlay',{clipPath:'circle(100%)'}) 
+ tl.to('.project-container', {opacity:1, y:"30px",stagger: 0.1},"-=1");
+ button.addEventListener("click",()=>{
+   tl.play();
+ })
+
+</script>
+
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  .container{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #6b00d6;
+    display: grid;
+    place-content: center;
+  }
+  .overlay{
+    clip-path: circle(0%);
+    
+    background: #fffeff;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2em;
+    pointer-events: none;
+  }
+  .exit{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+  }
+  .projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr) );
+  }
+  .project-container{
+   opacity: 0;
+   transform: translateY(-30px);
+  }
+
+</style>
