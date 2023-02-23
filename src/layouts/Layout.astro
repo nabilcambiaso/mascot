@@ -30,18 +30,21 @@ const { title } = Astro.props;
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
-      <div><span class="dot"></span></div>
-      <div><span class="dot"></span></div>
-      <div><span class="dot"></span></div>
-      <div><span class="dot"></span></div>
-      <div><span class="dot"></span></div>
+      <div class="square"><span class="dot"></span></div>
     </div>
   </body>
 </html>
@@ -54,15 +57,8 @@ const { title } = Astro.props;
     overflow: hidden;
     height: 100%;
     font-family: "Poppins", sans-serif;
-    /* background: rgb(0, 4, 36); */
     background: 
-    linear-gradient(190deg, rgba(0,0,0,1) 0%, rgba(0,0,34,1) 50%, rgba(0,14,50,1) 100%),
-      url("../assets/images/codingtexture.jpeg");
-     background-repeat: no-repeat; 
-    background-size: auto;
-    /* background-image:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-    url('images/background.jpg'); */
+    linear-gradient(190deg, rgba(0,0,0,1) 0%, rgba(0,0,34,1) 50%, rgba(0,14,50,1) 100%);
   }
   body{
     overflow: auto;
@@ -80,29 +76,20 @@ const { title } = Astro.props;
   top: 0;
   left: 0;
 }
-.wrapper h1 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: 888;
-  text-transform: uppercase;
-}
 .wrapper div {
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 30px;
   border: 2px solid rgba(50, 95, 242, 0.7);
   border-radius: 50px;
   position: absolute;
   top: 10%;
   left: 10%;
   animation: 4s linear infinite;
-  opacity: 0.3;
+  opacity: 0.25;
+}
+
+.wrapper .square {
+  border-radius: 0px;
 }
 div .dot {
   height: 10px;
@@ -188,6 +175,21 @@ div .dot {
   top: 90%;
   left: 80%;
   animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(16) {
+  top: 10%;
+  left: 5%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(17) {
+  top: 40%;
+  left: 55%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(18) {
+  top: 640%;
+  left: 85%;
+  animation: animate 6s linear infinite;
 }
 @keyframes animate {
   0% {

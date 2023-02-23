@@ -1,10 +1,5 @@
----
-// import ScrollTrigger from "gsap/ScrollTrigger";
-import gsap from "gsap";
----
 
-<div class="testit">
-  <div id="skillsSection">
+  <div id="skillsSection p-8">
     <div id="skills" class="p-8 my-2">
       <h1 class="text-3xl font-medium text-gray-100 text-center mt-6">
         Our Unique <span class="font-bold underline underline-offset-4"
@@ -13,9 +8,9 @@ import gsap from "gsap";
       </h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 p-8">
       <div
-        class="p-8 flex flex-col items-center md:mt-56 lg:mt-56 xl:mt-56 2xl:mt-56 hover:scale-110"
+        class="p-8 m-8 min-h-[350px] h-fit min-w-[16em] flex flex-col items-center md:mt-56 lg:mt-56 xl:mt-56 2xl:mt-56 hover:scale-110 bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg"
       >
         <div
           class="bg-indigo-100 rounded-full w-16 h-16 flex justify-center items-center text-blue-500 shadow-2xl"
@@ -56,7 +51,7 @@ import gsap from "gsap";
       </div>
 
       <div
-        class="p-8 flex flex-col items-center md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28 hover:scale-110"
+        class="p-8 m-8 min-h-[350px] h-fit min-w-[16em] flex flex-col items-center md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28 hover:scale-110  bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg"
       >
         <div
           class="bg-green-100 rounded-full w-16 h-16 flex justify-center items-center text-green-500 shadow-2xl"
@@ -99,7 +94,7 @@ import gsap from "gsap";
         </a>
       </div>
 
-      <div class="p-8 mx-5 flex flex-col items-center hover:scale-110">
+      <div class="p-8 m-8 min-h-[350px] h-fit min-w-[16em] mx-5 flex flex-col items-center hover:scale-110  bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg">
         <div
           class="bg-red-100 rounded-full w-16 h-16 flex justify-center items-center text-red-500 shadow-2xl"
         >
@@ -140,7 +135,6 @@ import gsap from "gsap";
       </div>
     </div>
   </div>
-</div>
 
 <script>
   gsap.timeline({
