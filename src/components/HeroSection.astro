@@ -102,11 +102,23 @@ rotate: 180deg;
 }
 </style>
 
-<script >
- var tl = gsap.timeline({defaults:{duration: 2, ease:Back.easeOut.config(2)}})
- tl.to('.heroContainer',{clipPath:'circle(100%)', backgroundColor:'transparent'});
- tl.to('.heroSectionLeft', {opacity:1, y:"0px",stagger: 0.1},"0.4");
- tl.to('.heroSectionRight', {opacity:1, rotation:'0deg', stagger: 0.1},"0");
- tl.to('.heroContainer',{height:'auto'},"0.5"); 
-
+<script>
+var tl = gsap.timeline({defaults:{duration: 2}})
+tl.to('.heroContainer',{clipPath:'circle(100%)', backgroundColor:'transparent'});
+tl.to('.heroSectionLeft', {opacity:1, y:"0px",stagger: 0.1},"0.4");
+tl.to('.heroSectionRight', {opacity:1, rotation:'0deg', stagger: 0.1},"0");
+tl.to('.heroContainer',{height:'auto'},"0.5"); 
+ gsap.timeline({
+    defaults: {
+      opacity: 1,
+      autoAlpha: 0,
+      duration: 0.4,
+      ease: "power3.out",
+    },
+    scrollTrigger: {
+      trigger: ".heroContainer",
+      start: "bottom 80%",
+      scrub: 1,
+    }
+  }).to(".heroContainer", {y:-30,scale:0.5, opacity:0.2});
 </script>

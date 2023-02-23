@@ -4,12 +4,12 @@ import brainstorm from "../assets/images/brainstorm.png";
 import solution from "../assets/images/solution.png";
 ---
 
-<div class="w-100  flex flex-col items-center p-8">
+<div class="businessScalingContainer w-100  flex flex-col items-center p-8">
   <div
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3"
   >
     <div
-      class="p-8 m-8 bg-blue-700 min-h-[350px] h-fit min-w-[16em] shadow-[20px_24px_28px_0px_rgba(0,0,0,0.75)] flex flex-col transition duration-300 hover:scale-105 ease-out hover:ease-in  hover:rotate-[-2deg]"
+      class="businessScalingCard p-8 m-8 bg-blue-700 min-h-[350px] h-fit min-w-[16em] shadow-[20px_24px_28px_0px_rgba(0,0,0,0.75)] flex flex-col transition duration-300 hover:scale-105 ease-out hover:ease-in  hover:rotate-[-2deg]"
     >
       <img class="" src={agency} alt="agency" width="30" height="30" />
       <h3 class="text-white font-[500] mt-7">What Is Our Agency's Approach?</h3>
@@ -20,7 +20,7 @@ import solution from "../assets/images/solution.png";
       </p>
     </div>
     <div
-      class="p-8 m-8 bg-gray-900 min-h-[350px] h-fit min-w-[16em] shadow-[20px_24px_28px_0px_rgba(0,0,0,0.75)]  md:mt-48 lg:mt-28 xl:mt-28 2xl:mt-28 transition duration-300 ease-out hover:ease-in  hover:scale-105 hover:rotate-[-2deg]"
+      class="businessScalingCard p-8 m-8 bg-gray-900 min-h-[350px] h-fit min-w-[16em] shadow-[20px_24px_28px_0px_rgba(0,0,0,0.75)]  md:mt-48 lg:mt-28 xl:mt-28 2xl:mt-28 transition duration-300 ease-out hover:ease-in  hover:scale-105 hover:rotate-[-2deg]"
     >
       <img class="" src={solution} alt="solution lamp" width="30" height="30" />
       <h3 class="text-white font-[500] mt-7">What Problems Do We Solve?</h3>
@@ -31,7 +31,7 @@ import solution from "../assets/images/solution.png";
         their target audience.
       </p>
     </div>
-    <div class="m-8 min-h-[350px] h-fit min-w-[16.9em] relative md:mt-[-6rem] lg:mt-56 xl:mt-56 2xl:mt-56 transition duration-300 ease-out hover:ease-in hover:scale-105 hover:rotate-[-2deg]">
+    <div class="businessScalingCard m-8 min-h-[350px] h-fit min-w-[16.9em] relative md:mt-[-6rem] lg:mt-56 xl:mt-56 2xl:mt-56 transition duration-300 ease-out hover:ease-in hover:scale-105 hover:rotate-[-2deg]">
       <div
         class="bg-gray-900 z-10 w-[calc(100%-10px)] shadow-[10px_0px_28px_0px_rgba(0,0,0,0.75)] p-8 mb-3"
       >
@@ -53,8 +53,29 @@ import solution from "../assets/images/solution.png";
   </div>
 </div>
 
-<style>
-  .hi {
-    margin-top: -500px;
-  }
-</style>
+<script>
+gsap.timeline({
+  defaults: {
+    opacity: 1,
+    },
+    scrollTrigger: {
+      trigger: ".businessScalingCard",
+      start: "top 100%",
+      end: "top center",
+      scrub: true,
+    },
+  }).fromTo(".businessScalingCard",{y:300,scale:0.4, opacity:0.4 }, {y:0,scale:1, opacity:1 });
+ gsap.timeline({
+    defaults: {
+      opacity: 0,
+      autoAlpha: 0,
+      duration: 0.4,
+      ease: "power3.out",
+    },
+    scrollTrigger: {
+      trigger: ".businessScalingContainer",
+      start: "bottom 80%",
+      scrub: 2,
+    },
+  }).to(".businessScalingContainer", {y:-30,scale:0.5, opacity:0.2, ease:"back"});
+</script>
