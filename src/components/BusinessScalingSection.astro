@@ -54,28 +54,28 @@ import solution from "../assets/images/solution.png";
 </div>
 
 <script>
-gsap.timeline({
-  defaults: {
-    opacity: 1,
-    },
-    scrollTrigger: {
-      trigger: ".businessScalingCard",
-      start: "top 100%",
-      end: "top center",
-      scrub: true,
-    },
-  }).fromTo(".businessScalingCard",{y:300,scale:0.4, opacity:0.4 }, {y:0,scale:1, opacity:1 });
- gsap.timeline({
-    defaults: {
-      opacity: 0,
-      autoAlpha: 0,
-      duration: 0.4,
-      ease: "power3.out",
-    },
-    scrollTrigger: {
-      trigger: ".businessScalingContainer",
-      start: "bottom 80%",
-      scrub: 2,
-    },
-  }).to(".businessScalingContainer", {y:-30,scale:0.5, opacity:0.2, ease:"back"});
+// gsap.timeline({
+//   defaults: {
+//     opacity: 1,
+//     },
+//     scrollTrigger: {
+//       trigger: ".businessScalingCard",
+//       start: "top 100%",
+//       end: "top center",
+//       scrub: true,
+//     },
+//   }).fromTo(".businessScalingCard",{y:300,scale:0.4, opacity:0.4 }, {y:0,scale:1, opacity:1 });
+//  gsap.timeline({
+//     defaults: {
+//       opacity: 0,
+//       autoAlpha: 0,
+//       duration: 0.4,
+//       ease: "power3.out",
+//     },
+//     scrollTrigger: {
+//       trigger: ".businessScalingContainer",
+//       start: "bottom 80%",
+//       scrub: 2,
+//     },
+//   }).to(".businessScalingContainer", {y:-30,scale:0.5, opacity:0.2, ease:"back"});
 </script>
