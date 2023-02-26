@@ -1,0 +1,74 @@
+---
+import ui from "./../assets/images/ui.png";
+import appDevelopment from "./../assets/images/appDevelopment.png";
+import agile from "./../assets/images/agile.png";
+---
+
+<div id="servicesSection">
+  <div class="p-8 my-2">
+    <h1 class="text-3xl font-medium text-gray-100 text-center mt-6">
+      Our Unique <span class="font-bold underline underline-offset-4"
+        >Services</span
+      > as <span class="text-blue-500 font-bold">Mascot</span>
+    </h1>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 p-8">
+    <div
+      class="transition duration-300 ease-out hover:ease-in hover:shadow-[3px_-20px_400px_-45px_rgb(71,183,232)_inset] p-8 m-8 min-h-[300px] h-fit min-w-[16em] flex flex-col items-center md:mt-56 lg:mt-56 xl:mt-56 2xl:mt-56 hover:scale-110 bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg"
+    >
+      <img src={ui} width="60px" height="60px" alt="ui/ux" />
+      <h2 class="uppercase mt-6 text-blue-500 text-center font-medium mb-3">
+        Websites and UI/UX Development
+      </h2>
+      <p class="font-light text-center text-sm text-gray-100 mb-3">
+        We highlight our expertise in building websites and creating beautiful
+        and intuitive user interfaces using popular JavaScript frameworks.
+      </p>
+    </div>
+    <div
+      class="transition duration-300 ease-out hover:ease-in hover:shadow-[3px_-20px_400px_-45px_rgb(71,232,184)_inset] p-8 m-8 min-h-[300px] h-fit min-w-[16em] flex flex-col items-center md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28 hover:scale-110 bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg"
+    >
+      <img
+        src={appDevelopment}
+        width="60px"
+        height="60px"
+        alt="app development"
+      />
+      <h2 class="uppercase mt-6 text-center text-green-500 font-medium mb-3">
+        Web and mobile applications
+      </h2>
+      <p class="font-light text-center text-sm text-gray-100 mb-3">
+        We create web and mobile applications using popular JavaScript libraries
+        like React.js and React Native. and Backend as well.
+      </p>
+    </div>
+
+    <div
+      class="transition duration-300 ease-out hover:ease-in hover:shadow-[3px_-20px_400px_-45px_rgba(200,71,232,0.86)_inset] p-8 m-8 min-h-[300px] h-fit min-w-[16em] mx-5 flex flex-col items-center hover:scale-110 bg-white bg-opacity-5 backdrop-blur-sm rounded drop-shadow-lg"
+    >
+      <img src={agile} width="60px" height="60px" alt="devops" />
+      <h2 class="uppercase mt-6 text-center text-red-500 font-medium mb-3">
+        DevOps
+      </h2>
+      <p class="font-light text-sm text-center text-gray-100 mb-3">
+        Expertise in DevOps, including our use of technologies like Docker, AWS,
+        DigitalOcean, Terraform and more to create reliable and efficient
+        infrastructure for our applications.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // gsap.timeline({
+  //   defaults: {
+  //     opacity: 1,
+  //   },
+  //   scrollTrigger: {
+  //     trigger: "#skills",
+  //     start: "top 90%",
+  //     end: 'top center',
+  //      scrub: 2,
+  //   },
+  // }).fromTo("#skills", {x:-600, stagger:0.05, opacity: 0},{x:0,  stagger:0.05});
+</script>

@@ -1,11 +1,12 @@
 ---
-import close from "./../assets/images/close.png";
 import bloodRiver from "./../assets/images/bloodRiver.png";
 import monello from "./../assets/images/monello.png";
-import mascotSite from "./../assets/images/mascotSite.png";
+import krypto from "./../assets/images/krypto.jpg";
+import marocAgency from "./../assets/images/marocAgency.png";
+import tbaalia from "./../assets/images/tbaalia.png";
+import tripsquad from "./../assets/images/tripsquad.webp";
 ---
-
-<div class="ourProjectsSection grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3  p-8">
+<div id="projects" class="ourProjectsSection grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3  p-8">
   <div
     class="siteWrapper m-8 h-[90vh] xs:w-90 md:w-[22em] lg:w-[25em] xl:w-[25em] 2xl:w-[25em] bg-white rounded drop-shadow-lg overflow-hidden"
   >
@@ -29,18 +30,50 @@ import mascotSite from "./../assets/images/mascotSite.png";
     />
   </div>
   <div
+  class="siteWrapper m-8 h-[90vh] xs:w-90 md:w-[22em] lg:w-[25em] xl:w-[25em] 2xl:w-[25em] bg-white rounded drop-shadow-lg overflow-hidden"
+>
+  <img
+    class="webSiteImg"
+    src={tripsquad}
+    width="100%"
+    height="100%"
+    alt="tripsquad"
+  />
+</div>
+  <div
+  class="siteWrapper m-8 h-[90vh] xs:w-90 md:w-[22em] lg:w-[25em] xl:w-[25em] 2xl:w-[25em] bg-white rounded drop-shadow-lg overflow-hidden"
+>
+  <img
+    class="webSiteImg"
+    src={krypto}
+    width="100%"
+    height="100%"
+    alt="krypto"
+  />
+</div>
+<div
+class="siteWrapper m-8 h-[90vh] xs:w-90 md:w-[22em] lg:w-[25em] xl:w-[25em] 2xl:w-[25em] bg-white rounded drop-shadow-lg overflow-hidden"
+>
+<img
+  class="webSiteImg"
+  src={marocAgency}
+  width="100%"
+  height="100%"
+  alt="marocAgency"
+/>
+</div>
+  <div
     class="siteWrapper m-8 h-[90vh] xs:w-90 md:w-[22em] lg:w-[25em] xl:w-[25em] 2xl:w-[25em] bg-white rounded drop-shadow-lg overflow-hidden"
   >
     <img
       class="webSiteImg"
-      src={mascotSite}
+      src={tbaalia}
       width="100%"
       height="100%"
-      alt="mascot"
+      alt="tbaalia"
     />
   </div>
 </div>
-
 <script>
   const siteWrapper = document.querySelectorAll(".siteWrapper");
   for (let index = 0; index < siteWrapper.length; index++) {

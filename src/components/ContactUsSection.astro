@@ -197,16 +197,19 @@ import triangle from "../assets/images/triangle.png";
         background:
           "linear-gradient(315deg, rgba(61,110,237,1) 0%, rgba(59,0,80,1) 100%)",
       });
-      tl.to(".contactUsContent", { opacity: 1 }, ">0.1");
+      tl.to(".theContainer", { opacity: 0 });
+      tl.to(".contactUsContent", { opacity: 1, zIndex:100},"<0.3");
     });
   }
   document
     .querySelector(".contactUsCloseButton")
     .addEventListener("click", () => {
-      var tl = gsap.timeline({ defaults: { duration: 2 } });
+      var tl = gsap.timeline();
+      tl.to(".theContainer", { opacity: 1,zIndex:100, duration:2 });
       tl.to(".contactUsSection", {
         clipPath: "circle(0%)",
         display: "none",
-      });
+        duration:2
+      },'<');
     });
 </script>
